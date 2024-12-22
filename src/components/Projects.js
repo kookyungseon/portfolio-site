@@ -46,21 +46,21 @@ const ProjectCard = ({ project }) => {
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
         />
       </div>
-      <h3 className="text-2xl font-semibold mb-2 text-gray-800 group-hover:text-pink-600 transition-colors">
+      <h3 className="text-2xl font-semibold mb-2 text-gray-800 group-hover:text-blue-600 transition-colors">
         {project.title}
       </h3>
       <p className="text-gray-600 mb-4">{project.category}</p>
       <p className="text-sm text-gray-500 mb-4">{project.description}</p>
       <div className="flex flex-wrap gap-2 mb-6">
         {project.technologies.map((tech, index) => (
-          <span key={index} className="bg-pink-50 text-pink-600 text-sm px-4 py-2 rounded-full shadow-sm">
+          <span key={index} className="bg-blue-50 text-blue-600 text-sm px-4 py-2 rounded-full shadow-sm">
             {tech}
           </span>
         ))}
       </div>
       <a
         href={project.link}
-        className="inline-flex items-center gap-2 text-pink-600 hover:text-pink-500 transition-colors"
+        className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-500 transition-colors"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -127,7 +127,7 @@ const Projects = () => {
     <section id="projects" className="py-20 px-6 bg-gray-50">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold mb-12 text-gray-800 flex items-center gap-2">
-          <Code className="text-pink-600" />
+          <Code className="text-blue-600" />
           프로젝트
         </h2>
         <div className="grid md:grid-cols-2 gap-8">
