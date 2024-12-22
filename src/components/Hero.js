@@ -1,6 +1,5 @@
 import React from 'react';
 import { Github, Mail } from 'lucide-react';
-import profileImage from './profil.png';
 
 const Hero = () => {
   return (
@@ -8,9 +7,7 @@ const Hero = () => {
       <div className="max-w-6xl mx-auto">
         <div className="bg-gradient-to-r from-indigo-500 to-purple-700 rounded-2xl p-12 md:flex items-center justify-between">
           <div className="text-center md:text-left">
-            <h1 
-              className="text-5xl font-bold mb-4 text-white animate-fade-down"
-            >
+            <h1 className="text-5xl font-bold mb-4 text-white animate-fade-down">
               안녕하세요,<br />구경선입니다!
             </h1>
             <p 
@@ -42,16 +39,10 @@ const Hero = () => {
             </div>
           </div>
           
-          <div className="hidden md:block relative">
-            <div className="w-64 h-64 rounded-full overflow-hidden shadow-2xl">
-              <img 
-                src={profileImage}
-                alt="구경선 프로필" 
-                className="w-[120%] h-[120%] object-cover object-center transform -translate-x-[0%] -translate-y-[10%]"
-                style={{
-                  objectPosition: '50% 0%' // 이미지 위치 조정
-                }}
-              />
+          {/* 대체된 프로필 이미지 섹션 */}
+          <div className="hidden md:block relative flex justify-center items-center w-64 h-64 rounded-full bg-gradient-to-r from-indigo-600 to-purple-800 shadow-2xl">
+            <div className="w-32 h-32 bg-white rounded-full flex justify-center items-center shadow-xl">
+              <span className="text-4xl font-semibold text-gray-800">KG</span>
             </div>
             <div className="absolute -z-10 w-72 h-72 rounded-full bg-purple-500 opacity-20 blur-xl -top-4 -left-4"></div>
           </div>
