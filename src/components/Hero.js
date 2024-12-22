@@ -17,9 +17,9 @@ const Hero = () => {
           {/* 이메일 보내기 버튼 */}
           <a
             href="mailto:koo0685@naver.com" // 이메일 주소 링크
-            className="px-8 py-4 text-lg font-medium bg-white text-gray-800 rounded-full shadow-lg hover:bg-gray-100 transition"
+            className="flex items-center px-8 py-4 text-lg font-medium bg-white text-gray-800 rounded-full shadow-lg hover:bg-gray-100 transition"
           >
-            <Mail size={20} /> 이메일 보내기
+            <Mail size={20} className="mr-2" /> 이메일 보내기
           </a>
           
           {/* GitHub 링크 버튼 */}
@@ -27,9 +27,9 @@ const Hero = () => {
             href="https://github.com/kookyungseon" // GitHub 링크
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 py-4 text-lg font-medium bg-gray-800 text-white rounded-full shadow-lg hover:bg-gray-700 transition"
+            className="flex items-center px-8 py-4 text-lg font-medium bg-gray-800 text-white rounded-full shadow-lg hover:bg-gray-700 transition"
           >
-            <Github size={20} /> 깃허브
+            <Github size={20} className="mr-2" /> 깃허브
           </a>
         </div>
       </div>
