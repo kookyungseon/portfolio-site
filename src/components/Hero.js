@@ -6,15 +6,15 @@ const Hero = () => {
   return (
     <header className="pt-24 pb-20 px-4">
       <div className="max-w-6xl mx-auto">
-        <div className="bg-gradient-to-r from-pink-300 to-violet-300 rounded-2xl p-12 md:flex items-center justify-between">
+        <div className="bg-gradient-to-r from-teal-400 to-blue-600 rounded-2xl p-12 md:flex items-center justify-between">
           <div className="text-center md:text-left">
             <h1 
-              className="text-5xl font-bold mb-4 text-gray-800 animate-fade-down"
+              className="text-5xl font-bold mb-4 text-white animate-fade-down"
             >
               안녕하세요,<br />구경선입니다!
             </h1>
             <p 
-              className="text-xl mb-8 text-gray-600 animate-fade-down"
+              className="text-xl mb-8 text-gray-200 animate-fade-down"
               style={{ animationDelay: '0.2s' }}
             >
               소프트웨어 & 지구환경과학 전공
@@ -43,7 +43,7 @@ const Hero = () => {
           </div>
           
           <div className="hidden md:block relative">
-            <div className="w-64 h-64 rounded-full overflow-hidden shadow-xl">
+            <div className="w-64 h-64 rounded-full overflow-hidden shadow-2xl">
               <img 
                 src={profileImage}
                 alt="구경선 프로필" 
