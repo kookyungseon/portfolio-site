@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <header className="pt-24 pb-20 px-4">
       <div className="max-w-6xl mx-auto">
-        <div className="bg-gradient-to-r from-teal-400 to-blue-600 rounded-2xl p-12 md:flex items-center justify-between">
+        <div className="bg-gradient-to-r from-indigo-500 to-purple-700 rounded-2xl p-12 md:flex items-center justify-between">
           <div className="text-center md:text-left">
             <h1 
               className="text-5xl font-bold mb-4 text-white animate-fade-down"
@@ -53,7 +53,7 @@ const Hero = () => {
                 }}
               />
             </div>
-            <div className="absolute -z-10 w-72 h-72 rounded-full bg-blue-500 opacity-20 blur-xl -top-4 -left-4"></div>
+            <div className="absolute -z-10 w-72 h-72 rounded-full bg-purple-500 opacity-20 blur-xl -top-4 -left-4"></div>
           </div>
         </div>
       </div>

@@ -7,37 +7,37 @@ const Navigation = ({ isMenuOpen, setIsMenuOpen, scrollToSection }) => (
       {/* Navigation Bar */}
       <div className="flex justify-between items-center py-4">
         {/* Logo */}
-        <span className="text-2xl font-bold text-pink-500">kyungseon</span>
+        <span className="text-2xl font-bold text-purple-600">kyungseon</span>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
           <button
             onClick={() => scrollToSection('education')}
-            className="text-gray-700 hover:text-pink-500 transition-colors"
+            className="text-gray-700 hover:text-purple-600 transition-colors"
           >
             학력
           </button>
           <button
             onClick={() => scrollToSection('certifications')}
-            className="text-gray-700 hover:text-pink-500 transition-colors"
+            className="text-gray-700 hover:text-purple-600 transition-colors"
           >
             자격증
           </button>
           <button
             onClick={() => scrollToSection('projects')}
-            className="text-gray-700 hover:text-pink-500 transition-colors"
+            className="text-gray-700 hover:text-purple-600 transition-colors"
           >
             프로젝트
           </button>
           <button
             onClick={() => scrollToSection('experience')}
-            className="text-gray-700 hover:text-pink-500 transition-colors"
+            className="text-gray-700 hover:text-purple-600 transition-colors"
           >
             경력
           </button>
           <a
             href="mailto:koo0685@naver.com"
-            className="bg-pink-500 text-white px-4 py-2 rounded-lg hover:bg-pink-600 transition"
+            className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition"
           >
             연락하기
           </a>
@@ -46,7 +46,7 @@ const Navigation = ({ isMenuOpen, setIsMenuOpen, scrollToSection }) => (
         {/* Mobile Menu Toggle */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden text-gray-700 hover:text-pink-500 transition-colors"
+          className="md:hidden text-gray-700 hover:text-purple-600 transition-colors"
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -57,31 +57,31 @@ const Navigation = ({ isMenuOpen, setIsMenuOpen, scrollToSection }) => (
         <div className="md:hidden py-4 space-y-4">
           <button
             onClick={() => scrollToSection('education')}
-            className="block w-full text-left text-gray-700 hover:text-pink-500 transition-colors"
+            className="block w-full text-left text-gray-700 hover:text-purple-600 transition-colors"
           >
             학력
           </button>
           <button
             onClick={() => scrollToSection('certifications')}
-            className="block w-full text-left text-gray-700 hover:text-pink-500 transition-colors"
+            className="block w-full text-left text-gray-700 hover:text-purple-600 transition-colors"
           >
             자격증
           </button>
           <button
             onClick={() => scrollToSection('projects')}
-            className="block w-full text-left text-gray-700 hover:text-pink-500 transition-colors"
+            className="block w-full text-left text-gray-700 hover:text-purple-600 transition-colors"
           >
             프로젝트
           </button>
           <button
             onClick={() => scrollToSection('experience')}
-            className="block w-full text-left text-gray-700 hover:text-pink-500 transition-colors"
+            className="block w-full text-left text-gray-700 hover:text-purple-600 transition-colors"
           >
             경력
           </button>
           <a
             href="mailto:koo0685@naver.com"
-            className="block text-center bg-pink-500 text-white px-4 py-2 rounded-lg hover:bg-pink-600 transition"
+            className="block text-center bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition"
           >
             연락하기
           </a>
