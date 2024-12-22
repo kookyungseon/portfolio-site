@@ -39,15 +39,15 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* 그래픽 대체 스타일 */}
-          <div className="hidden md:block relative">
-            <div className="w-64 h-64 bg-gradient-to-r from-teal-400 to-blue-600 rounded-full flex items-center justify-center shadow-xl">
-              {/* 간단한 일러스트나 그래픽 아이콘 추가 */}
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" className="w-32 h-32">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-              </svg>
+          {/* 그래픽 대체 스타일 (이미지 공간 없애고 텍스트 중심 디자인) */}
+          <div className="hidden md:block relative flex justify-center items-center flex-col text-white">
+            <div className="text-6xl font-extrabold mb-4 animate-bounce">
+              구경선
             </div>
-            <div className="absolute -z-10 w-72 h-72 rounded-full bg-purple-500 opacity-20 blur-xl -top-4 -left-4"></div>
+            <div className="text-3xl font-medium animate-pulse">
+              소프트웨어 & 지구환경과학 전공
+            </div>
+            <div className="absolute -z-10 w-72 h-72 rounded-full bg-purple-500 opacity-30 blur-xl -top-4 -left-4"></div>
           </div>
         </div>
       </div>
