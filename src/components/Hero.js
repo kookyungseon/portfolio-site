@@ -4,7 +4,7 @@ import { Github, Mail } from 'lucide-react';
 const Hero = () => {
   return (
     <header className="relative w-full h-screen bg-gradient-to-r from-teal-400 to-purple-600 flex items-center justify-center text-white">
-      <div className="text-center px-6 md:px-12 max-w-4xl w-full">
+      <div className="text-center px-6 md:px-12 max-w-4xl w-full relative z-10">
         <h1 className="text-6xl font-extrabold mb-6 leading-tight tracking-tight animate-slide-up">
           안녕하세요, <br />
           구경선입니다.
@@ -35,7 +35,7 @@ const Hero = () => {
       </div>
 
       {/* 배경에 추가된 스타일 - 부드러운 블러 효과 */}
-      <div className="absolute inset-0 bg-gradient-to-r from-teal-400 to-purple-600 opacity-30 blur-xl"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-teal-400 to-purple-600 opacity-30 blur-xl z-0"></div>
     </header>
   );
 };
