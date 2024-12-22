@@ -45,7 +45,7 @@ const Certifications = () => {
     <section id="certifications" className="bg-gray-50 px-6 py-20">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold text-gray-800 mb-12 flex items-center gap-4">
-          <Award className="text-pink-600" />
+          <Award className="text-[#4A90E2]" />
           자격증 및 수상내역
         </h2>
         <div className="grid md:grid-cols-2 gap-12">
@@ -55,7 +55,7 @@ const Certifications = () => {
             <div className="space-y-8">
               {certifications.map((cert, index) => (
                 <div key={index} className="flex items-start gap-6">
-                  <CheckCircle className="text-pink-600 flex-shrink-0 mt-1" size={24} />
+                  <CheckCircle className="text-[#4A90E2] flex-shrink-0 mt-1" size={24} />
                   <div>
                     <h4 className="font-semibold text-xl text-gray-800">{cert.name}</h4>
                     <p className="text-gray-600">{cert.code}</p>
@@ -73,14 +73,14 @@ const Certifications = () => {
             
             {/* 대외 수상 */}
             <div className="mb-10">
-              <h4 className="text-xl font-semibold mb-6 text-pink-600">대외 수상</h4>
+              <h4 className="text-xl font-semibold mb-6 text-[#4A90E2]">대외 수상</h4>
               {externalAwards.map((award, index) => (
                 <div key={index} className="flex items-start gap-6 mb-8">
-                  <Trophy className="text-pink-600 flex-shrink-0 mt-1" size={24} />
+                  <Trophy className="text-[#4A90E2] flex-shrink-0 mt-1" size={24} />
                   <div>
                     <h5 className="font-semibold text-xl text-gray-800">{award.title}</h5>
                     <p className="text-gray-600 mt-2">{award.competition}</p>
-                    <p className="text-pink-600 mt-2">{award.organization}</p>
+                    <p className="text-[#4A90E2] mt-2">{award.organization}</p>
                     <p className="text-gray-500 text-sm mt-2">{award.date}</p>
                   </div>
                 </div>
@@ -89,14 +89,14 @@ const Certifications = () => {
 
             {/* 교내 수상 */}
             <div>
-              <h4 className="text-xl font-semibold mb-6 text-pink-600">교내 수상</h4>
+              <h4 className="text-xl font-semibold mb-6 text-[#4A90E2]">교내 수상</h4>
               {internalAwards.map((award, index) => (
                 <div key={index} className="flex items-start gap-6 mb-8">
-                  <Award className="text-pink-600 flex-shrink-0 mt-1" size={24} />
+                  <Award className="text-[#4A90E2] flex-shrink-0 mt-1" size={24} />
                   <div>
                     <h5 className="font-semibold text-xl text-gray-800">{award.title}</h5>
                     <p className="text-gray-600 mt-2">{award.competition}</p>
-                    <p className="text-pink-600 mt-2">{award.organization}</p>
+                    <p className="text-[#4A90E2] mt-2">{award.organization}</p>
                     <p className="text-gray-500 text-sm mt-2">{award.date}</p>
                   </div>
                 </div>
