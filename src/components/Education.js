@@ -45,28 +45,26 @@ const Education = () => {
   ];
 
   return (
-    <section id="education" className="py-20 px-4 bg-gray-50">
+    <section id="education" className="py-20 px-6 bg-gradient-to-r from-gray-50 to-gray-100">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold mb-12 flex items-center gap-2 text-gray-800">
-          <BookOpen className="text-pink-500" />
+        <h2 className="text-4xl font-extrabold text-gray-800 mb-12 flex items-center gap-4">
+          <BookOpen className="text-indigo-600" size={28} />
           학력사항
         </h2>
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-12">
           {educationData.map((edu, index) => (
-            <div key={index} className="bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-all duration-300">
+            <div key={index} className="bg-white p-8 rounded-3xl border border-gray-200 shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 transform">
               <h3 className="text-2xl font-semibold mb-6 text-gray-800">{edu.school}</h3>
               <div className="space-y-8">
                 {edu.departments.map((dept, deptIndex) => (
-                  <div key={deptIndex} className="border-l-4 border-pink-500 pl-4">
-                    <h4 className="text-xl font-semibold text-pink-600">  {/* 색상 변경: 텍스트 색상 수정 */}
-                      {dept.name}
-                    </h4>
+                  <div key={deptIndex} className="border-l-4 border-indigo-600 pl-4">
+                    <h4 className="text-xl font-semibold text-indigo-600 mb-2">{dept.name}</h4>
                     <p className="text-gray-600 mt-1">{dept.period}</p>
                     <ul className="mt-4 space-y-2">
                       {dept.details.map((detail, detailIndex) => (
                         <li 
                           key={detailIndex} 
-                          className="text-gray-700 flex items-center gap-2 before:content-['•'] before:text-pink-500"
+                          className="text-gray-700 flex items-center gap-2 before:content-['•'] before:text-indigo-600"
                         >
                           {detail}
                         </li>

@@ -18,7 +18,7 @@ const ProjectCard = ({ project }) => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.2 } // 20%가 화면에 보일 때 트리거
+      { threshold: 0.3 } // 30%가 화면에 보일 때 트리거
     );
 
     if (cardRef.current) {
@@ -35,25 +35,25 @@ const ProjectCard = ({ project }) => {
   return (
     <div
       ref={cardRef}
-      className={`bg-white p-8 rounded-xl group hover:shadow-lg transition-all duration-1000 border border-gray-200 transform ${
+      className={`bg-white p-6 rounded-lg shadow-lg group hover:shadow-xl transition-all duration-500 transform ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}
     >
-      <div className="h-48 bg-gray-100 rounded-lg mb-6 overflow-hidden">
+      <div className="h-56 bg-gray-200 rounded-lg mb-6 overflow-hidden">
         <img
           src={project.image}
           alt={`${project.title} 이미지`}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
         />
       </div>
-      <h3 className="text-2xl font-semibold mb-2 group-hover:text-pink-600 transition-colors">
+      <h3 className="text-2xl font-semibold mb-2 text-gray-800 group-hover:text-pink-600 transition-colors">
         {project.title}
       </h3>
-      <p className="text-gray-700 mb-4">{project.category}</p>
-      <p className="text-sm text-gray-600 mb-4">{project.description}</p>
+      <p className="text-gray-600 mb-4">{project.category}</p>
+      <p className="text-sm text-gray-500 mb-4">{project.description}</p>
       <div className="flex flex-wrap gap-2 mb-6">
         {project.technologies.map((tech, index) => (
-          <span key={index} className="bg-pink-50 text-pink-600 text-sm px-3 py-1 rounded-full">
+          <span key={index} className="bg-pink-50 text-pink-600 text-sm px-4 py-2 rounded-full shadow-sm">
             {tech}
           </span>
         ))}
@@ -124,9 +124,9 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 px-4 bg-gray-100">
+    <section id="projects" className="py-20 px-6 bg-gray-50">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold mb-12 flex items-center gap-2">
+        <h2 className="text-4xl font-bold mb-12 text-gray-800 flex items-center gap-2">
           <Code className="text-pink-600" />
           프로젝트
         </h2>
@@ -138,7 +138,7 @@ const Projects = () => {
         <div className="text-center mt-12">
           <a 
             href="https://github.com/kookyungseon"
-            className="inline-flex items-center gap-2 bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+            className="inline-flex items-center gap-2 bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-colors"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -152,4 +152,3 @@ const Projects = () => {
 };
 
 export default Projects;
- 

@@ -19,22 +19,22 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 px-4 bg-gray-50">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold mb-12 flex items-center gap-2">
-          <Briefcase className="text-pink-500" />
+    <section id="experience" className="py-20 px-6 bg-gradient-to-r from-gray-50 to-gray-100">
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-4xl font-extrabold text-gray-800 mb-12 flex items-center gap-4">
+          <Briefcase className="text-indigo-600" size={28} />
           경력사항
         </h2>
         <div className="space-y-8">
           {experiences.map((exp, index) => (
-            <div key={index} className="bg-white p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl">
+            <div key={index} className="bg-white p-8 rounded-3xl shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 hover:translate-y-1 transform">
               <div className="md:flex justify-between items-start mb-6">
                 <div>
                   <h3 className="text-2xl font-semibold text-gray-800">{exp.company}</h3>
-                  <p className="text-pink-500 mt-1">{exp.position}</p>
+                  <p className="text-indigo-600 mt-1">{exp.position}</p>
                 </div>
                 <div className="flex items-center gap-2 mt-4 md:mt-0">
-                  <Calendar className="text-pink-500" size={16} />
+                  <Calendar className="text-indigo-600" size={16} />
                   <span className="text-gray-600">{exp.period}</span>
                 </div>
               </div>
@@ -46,7 +46,7 @@ const Experience = () => {
                 <ul className="space-y-2 text-gray-600">
                   {exp.achievements.map((achievement, i) => (
                     <li key={i} className="flex items-start gap-2">
-                      <CheckCircle className="text-pink-500 flex-shrink-0 mt-1" size={16} />
+                      <CheckCircle className="text-indigo-600 flex-shrink-0 mt-1" size={16} />
                       <span>{achievement}</span>
                     </li>
                   ))}
@@ -55,9 +55,9 @@ const Experience = () => {
 
               <div className="mt-6">
                 <h4 className="font-semibold text-lg text-gray-800 mb-3">사용 기술:</h4>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-3">
                   {exp.technologies.map((tech, i) => (
-                    <span key={i} className="bg-pink-500 bg-opacity-20 text-pink-500 text-sm px-3 py-1 rounded-full">
+                    <span key={i} className="bg-indigo-600 bg-opacity-10 text-indigo-600 text-sm px-4 py-2 rounded-full transition-colors duration-300 hover:bg-indigo-600 hover:text-white">
                       {tech}
                     </span>
                   ))}
