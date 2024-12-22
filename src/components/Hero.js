@@ -38,11 +38,14 @@ const Hero = () => {
               </a>
             </div>
           </div>
-          
-          {/* 대체된 프로필 이미지 섹션 */}
-          <div className="hidden md:block relative flex justify-center items-center w-64 h-64 rounded-full bg-gradient-to-r from-indigo-600 to-purple-800 shadow-2xl">
-            <div className="w-32 h-32 bg-white rounded-full flex justify-center items-center shadow-xl">
-              <span className="text-4xl font-semibold text-gray-800">KG</span>
+
+          {/* 그래픽 대체 스타일 */}
+          <div className="hidden md:block relative">
+            <div className="w-64 h-64 bg-gradient-to-r from-teal-400 to-blue-600 rounded-full flex items-center justify-center shadow-xl">
+              {/* 간단한 일러스트나 그래픽 아이콘 추가 */}
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" className="w-32 h-32">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+              </svg>
             </div>
             <div className="absolute -z-10 w-72 h-72 rounded-full bg-purple-500 opacity-20 blur-xl -top-4 -left-4"></div>
           </div>
