@@ -38,6 +38,12 @@ const Certifications = () => {
       competition: "SW 프로젝트 영어발표회",
       organization: "충북대학교 SW중심대학사업단",
       date: "2024.07.03",
+    },
+    {
+      title: "다전공 체험수기 공모전 우수상",
+      competition: "다전공 체험수기 공모전",
+      organization: "충북대학교 교육처장",
+      date: "2024.12.31",
     }
   ];
 

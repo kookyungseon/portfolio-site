@@ -15,7 +15,7 @@ const Hero = () => {
       {!showContent && (
         <div className="absolute inset-0 flex items-center justify-center bg-black text-white">
           <h1 className="text-6xl md:text-8xl font-extrabold tracking-wider animate-fade-in">
-            구경선
+            Koo kyungseon
           </h1>
         </div>
       )}
