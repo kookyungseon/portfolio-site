@@ -75,7 +75,7 @@ const Projects = () => {
   const projects = [
     {
       title: "지정주차 프로젝트",
-      category: "IoT 기반 주차 공유 플랫폼",
+      category: "멀티 캠퍼스 융복합 프로젝트",
       description: "IoT 기술을 이용한 주차 공간 관리 시스템 설계 및 구현",
       technologies: ["IoT", "React", "Spring Boot"],
       image: carImage, // import로 가져온 이미지

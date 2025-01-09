@@ -1,41 +1,52 @@
-import React from 'react';
-import { Github, Mail } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import { Github, Mail } from "lucide-react";
 
 const Hero = () => {
-  return (
-    <header className="relative w-full h-screen bg-gradient-to-r from-teal-400 to-purple-600 flex items-center justify-center text-white">
-      <div className="text-center px-6 md:px-12 max-w-4xl w-full relative z-10">
-        <h1 className="text-6xl font-extrabold mb-6 leading-tight tracking-tight animate-slide-up">
-          안녕하세요, <br />
-          구경선입니다.
-        </h1>
-        <p className="text-2xl mb-8 font-semibold opacity-80 animate-fade-up" style={{ animationDelay: '0.2s' }}>
-          소프트웨어 & 지구환경과학 전공
-        </p>
-        
-        <div className="flex justify-center gap-8 animate-fade-up" style={{ animationDelay: '0.4s' }}>
-          {/* 이메일 보내기 버튼 */}
-          <a
-            href="mailto:koo0685@naver.com" // 이메일 주소 링크
-            className="flex items-center px-8 py-4 text-lg font-medium bg-white text-gray-800 rounded-full shadow-lg hover:bg-gray-100 transition"
-          >
-            <Mail size={20} className="mr-2" /> 이메일 보내기
-          </a>
-          
-          {/* GitHub 링크 버튼 */}
-          <a
-            href="https://github.com/kookyungseon" // GitHub 링크
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center px-8 py-4 text-lg font-medium bg-gray-800 text-white rounded-full shadow-lg hover:bg-gray-700 transition"
-          >
-            <Github size={20} className="mr-2" /> 깃허브
-          </a>
-        </div>
-      </div>
+  const [showContent, setShowContent] = useState(false);
 
-      {/* 배경에 추가된 스타일 - 부드러운 블러 효과 */}
-      <div className="absolute inset-0 bg-gradient-to-r from-teal-400 to-purple-600 opacity-30 blur-xl z-0"></div>
+  useEffect(() => {
+    const timeout = setTimeout(() => setShowContent(true), 2000);
+    return () => clearTimeout(timeout);
+  }, []);
+
+  return (
+    <header className="relative w-full h-screen bg-black flex items-center justify-center overflow-hidden">
+      {/* 이름 등장 애니메이션 */}
+      {!showContent && (
+        <div className="absolute inset-0 flex items-center justify-center bg-black text-white">
+          <h1 className="text-6xl md:text-8xl font-extrabold tracking-wider animate-fade-in">
+            구경선
+          </h1>
+        </div>
+      )}
+
+      {/* 메인 콘텐츠 */}
+      {showContent && (
+        <div className="relative text-center px-6 md:px-12 max-w-5xl w-full">
+          <h1 className="text-5xl md:text-7xl font-extrabold text-white tracking-wide mb-8 animate-slide-up">
+            안녕하세요, <span className="text-gradient">구경선</span>입니다.
+          </h1>
+          <p className="text-lg md:text-2xl text-gray-400 mb-12 animate-fade-up">
+            소프트웨어 & 지구환경과학 전공으로 <br /> 지속 가능한 미래를 만듭니다.
+          </p>
+          <div className="flex justify-center gap-6 animate-fade-up" style={{ animationDelay: "0.6s" }}>
+            <a
+              href="mailto:koo0685@naver.com"
+              className="flex items-center px-8 py-3 text-lg font-medium text-white bg-gray-800 rounded-full shadow-md hover:shadow-lg hover:bg-gray-700 transition"
+            >
+              <Mail size={20} className="mr-3" /> 이메일 보내기
+            </a>
+            <a
+              href="https://github.com/kookyungseon"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center px-8 py-3 text-lg font-medium text-white bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-md hover:shadow-lg hover:from-blue-600 hover:to-purple-600 transition"
+            >
+              <Github size={20} className="mr-3" /> 깃허브
+            </a>
+          </div>
+        </div>
+      )}
     </header>
   );
 };

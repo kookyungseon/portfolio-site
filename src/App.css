@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+/* 사용자 정의 스타일 */
+.text-gradient {
+  background: linear-gradient(to right, #4facfe, #9b51e0);
+  -webkit-background-clip: text;
+  color: transparent;
+}
