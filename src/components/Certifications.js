@@ -14,6 +14,12 @@ const Certifications = () => {
       code: "ADsP",
       description: "Advanced Data Analytics Semi-Professional",
       date: "2024.11.29"
+    },
+    {
+      name: "빅데이터 분석기사",
+      code: "BigData Analyst",
+      description: "Big Data Analysis Specialist",
+      date: "2025.07.11"  // 예시 날짜
     }
   ];
 
